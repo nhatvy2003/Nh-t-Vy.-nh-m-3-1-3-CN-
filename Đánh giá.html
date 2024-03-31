@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh giá</title>
+</head>
+<style>
+    body { font-family: Arial, sans-serif; }
+    .container { width: 70%; margin: 0 auto; }
+    h1 { color: blue; font-size: 30px; text-align: center; }
+    label { display: block; margin-bottom: 5px; }
+    input, textarea { width: 100%; padding: 5px; margin-bottom: 10px; }
+    button { border: none; border-radius: 5px; color: white; background-color: cyan; padding: 10px 20px; cursor: pointer; }
+</style>
+<body>
+    <div class="container">
+        <h1>Đánh giá</h1>
+        <form id="reviewForm">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="comment">Nhận xét:</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+            
+            <button type="button" onclick="submitReview()">Gửi Đánh Giá</button>
+        </form>
+
+        <div id="displayReview" style="display: none;">
+            <h2>Thông tin đánh giá:</h2>
+            <p id="reviewInfo"></p>
+        </div>
+    </div>
+
+    <script>
+        function submitReview() {
+            var name = document.getElementById("name").value;
+            var comment = document.getElementById("comment").value;
+            var currentDate = new Date();
+            var formattedDate = currentDate.getDate() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getFullYear();
+
+            var reviewInfo = "@ " + name + "<br>" +
+                             "<i>" + formattedDate + "</i><br>" +
+                             "Nhận xét: " + comment;
+
+            document.getElementById("reviewInfo").innerHTML = reviewInfo;
+            document.getElementById("displayReview").style.display = "block";
+            document.getElementById("reviewForm").reset();
+        }
+    </script>
+</body>
+</html>

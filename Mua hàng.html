@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       .card {
+            margin-bottom: 20px;
+        }
+        .card img {
+            width: 280px;
+        }
+        .more-content {
+            display: none;
+        }
+        /* Thêm CSS cho phần đầu */
+        .header {
+            text-align: center; /* Canh giữa */
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+    <h1>Laptop dành cho học trực tuyến</h1>
+    <p>Học tập trực tuyến không còn là một khái niệm xa lạ với học sinh, sinh viên và cả các bậc phụ huynh cả nước trong thời điểm dịch Covid-19 có nhiều diễn biến phức tạp như hiện nay. </p>
+<div class="container">
+    <div class="row">
+        <!-- Sản phẩm 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://surfacestore.com.vn/wp-content/uploads/2021/05/surface-laptop-3-1-surfacestore-img.jpg" alt="Sản phẩm 1">
+                <div class="card-body">
+                    <h5 class="card-title">SURFACE LAPTOP 3 13.5</h5>
+                    <p>Surface Laptop 3 được đánh giá là dòng sản phẩm nổi bật trong bộ sưu tập vô cùng đa dạng mà thương hiệu Microsoft cho ra mắt năm 2019.<span id="dots1">...</span><span id="more1" class="more-content"> Với thiết kế vuông vức tối giản sang trọng cùng hiệu năng cao có nhiều cải tiến, chắc chắn máy sẽ thỏa mãn được hầu hết người sử dụng. Trong bài viết sau đây, hãy cùng Surface city khám phá về dòng laptop đặc biệt này qua chiếc Surface Laptop 3 phiên bản màn hình 13-inch.</span></p>
+                    <button onclick="toggleReadMore(1)" id="myBtn1" class="read-more-btn">Đọc tiếp</button>
+                </div>
+            </div>
+        </div>
+        <!-- Sản phẩm 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://cdn.tgdd.vn/Products/Images/44/48736/Samsung-X180-Barbie-185.jpg" alt="Sản phẩm 2">
+                <div class="card-body">
+                    <h5 class="card-title">LAPTOP SAMSUNG X180 BARBIE</h5>
+                    <p>Samsung X180 Barbie Edition Specifications: 11.6-inch LCD LED backlight display Display resolution of 1366 x 768 pixel<span id="dots2">...</span><span id="more2" class="more-content">, & 16:9 aspect ratio Runs on Windows 7 OS Powered by an Intel Core i3 330UM processor NVidia GeForce 310M graphics chip 500GB of HDD Unique Barbie touch on the computer, a Barbie mouse pad, mouse and Barbie
+                    </span></p>
+                    <button onclick="toggleReadMore(2)" id="myBtn2" class="read-more-btn">Đọc tiếp</button>
+                </div>
+            </div>
+        </div>
+        <!-- Sản phẩm 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://2tmobile.com/wp-content/uploads/2022/04/thinkpad-x1-carbon-gen-9-2021-3_2tmobile.jpg" alt="Sản phẩm 3">
+                <div class="card-body">
+                    <h5 class="card-title">ThinkPad X1 Carbon Gen 9</h5>
+                    <p>ThinkPad X1 Carbon Gen 9 Core i7 Máy mới 100%, không hộp giấy, sẵn hàng tại 2T Mobile </p>
+                        <p>– Ship from USA<span id="dots3">...</span><span id="more3" class="more-content">Màn hình: 14″ WUXGA (1920 x 1200) Multi-touch IPS, 400 nits, anti-glare, 16:10, 100% sRGB, Low power, TÜV Low Blue Light
+                        CPU: Intel® Core™ i7-1165G7 Gen 11th (2.8Ghz up to 4.7Ghz, 4 cores, 8 threads, 12MB cache)
+                        Card đồ họa: Intel® Iris® Xe Graphics</span></p>
+                    <button onclick="toggleReadMore(3)" id="myBtn3" class="read-more-btn">Đọc tiếp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleReadMore(number) {
+        var dots = document.getElementById("dots" + number);
+        var moreText = document.getElementById("more" + number);
+        var btnText = document.getElementById("myBtn" + number);
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Đọc thêm";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Thu gọn";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+</body>
+</html>
